@@ -36,6 +36,13 @@
 
 ## File Permissions
 
+First tree columns are for user, group and others. The last column is for special permissions.
+
+```bash
+# chmod u=rwx,g=rwx,o=rwx file1
+chmod rwxrwxrwx file1
+```
+
 | id  | command | description                 | example                                     |
 | --- | ------- | --------------------------- | ------------------------------------------- |
 | 1   | `chmod` | change file mode bits       | `chmod 777 /home/user1/dir1/file1`          |
@@ -50,33 +57,3 @@
 | 2   | `bzip2` | compress or expand files     | `bzip2 -d /home/user1/dir1/file1.bz2` |
 | 3   | `zip`   | compress or expand files     | `zip -d /home/user1/dir1/file1.zip`   |
 | 4   | `unzip` | list, test, or extract files | `unzip /home/user1/dir1/file1.zip`    |
-
-## Process Management
-
-| id  | command | description                                | example                          |
-| --- | ------- | ------------------------------------------ | -------------------------------- |
-| 1   | `ps`    | report a snapshot of the current processes | `ps -ef`                         |
-| 2   | `kill`  | send a signal to a process                 | `kill -9 1234`                   |
-| 3   | `top`   | display Linux processes                    | `top`                            |
-| 4   | `jobs`  | report status of jobs                      | `jobs`                           |
-| 5   | `fg`    | run job in the foreground                  | `fg %1`                          |
-| 6   | `bg`    | run job in the background                  | `bg %1`                          |
-| 7   | `nohup` | run a command immune to hangups            | `nohup /home/user1/dir1/file1 &` |
-
-## Network Commands
-
-| id  | command | description                             | example     |
-| --- | ------- | --------------------------------------- | ----------- |
-| 1   | `ping`  | send ICMP ECHO_REQUEST to network hosts | `ping -c 10 |
-| 2   | `ifconfig` | configure a network interface | `ifconfig eth0
-| 3   | `netstat` | display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships | `netstat -tupln
-| 4   | `route` | display or manipulate the IP routing table | `route -n
-| 5   | `whois` | look up whois information for a domain name | `whois google.com
-| 6   | `dig` | DNS lookup utility | `dig google.com
-| 7   | `host` | DNS lookup utility | `host google.com
-| 8   | `nslookup` | DNS lookup utility | `nslookup google.com
-| 9   | `wget` | retrieve files from the web | `wget https://www.google.com
-| 10  | `curl` | transfer a URL | `curl https://www.google.com
-| 11  | `ftp` | transfer files between hosts on a network | `ftp ftp.google.com
-| 12  | `ssh` | secure shell | `ssh
-
