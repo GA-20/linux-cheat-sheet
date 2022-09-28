@@ -1,4 +1,3 @@
-
 ## Levels and Layers in Linux
 
 ### Hardware: Level 1
@@ -31,7 +30,7 @@ The main memory is the place where the data and instructions are stored. An slot
 - Scheduling: The kernel decides which process to run next.
 - Terminating a process: The kernel terminates the process and frees its memory.
 
-Note: Many processes can be running simultaneously but only one process can be running at a time. 
+Note: Many processes can be running simultaneously but only one process can be running at a time.
 
 ### Memory Management
 
@@ -56,6 +55,10 @@ Interaction between the user process and the kernel.
 
 ### User Space
 
+The space that kernel allocated for the user process.
 
+### Users
 
+A users is an entity that can run programs. Each user has a unique user ID (UID) and a unique group ID (GID). The user ID is used to identify the user and the group ID is used to identify the group of users.
 
+Note: The root user has UID 0 and GID 0, and it is the only user that can run programs with root privileges which means that has access as administrator on traditional Unix systems. Operating as root can be dangerous. It can be difficult to identify and correct mistakes because the system will let you do anything
