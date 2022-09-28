@@ -1,3 +1,4 @@
+<<<<<<< HEAD:achitecture-overview/README.md
 ## Table of content
 
 - [Table of content](#table-of-content)
@@ -16,30 +17,33 @@
     - [Users](#users)
 
 ## Levels and Layers in Linux
+=======
+## Levels and Layers in Linux 🏴‍☠️
+>>>>>>> 889390c48a3ce7037e6742505d5ff3bca67494cf:working-process/README.md
 
-### Hardware: Level 1
+### ✔ Hardware: Level 1
 
 The hardware is at the base, include the memory to perform computation. (CPU, RAM, disk, network, etc.)
 
-### Kernel: Level 2
+### ✔ Kernel: Level 2
 
 It is responsible for managing the hardware and providing an interface for the user to interact with the hardware. (system calls, process management, memory management, device drivers, etc.)
 
-### User Process: Level 3
+### ✔ User Process: Level 3 
 
 The running programs managed by the kernel. (graphical user interface, servers, shell, etc.)
 
-## Hardware: Main Memory
+## Hardware: Main Memory 🏴‍☠️
 
 The main memory is the place where the data and instructions are stored. An slot in the memory is called a byte. The memory is organized in a way that each byte has a unique address. The address is a number that identifies the byte.
 
-## Kernel: System Calls
+## Kernel 🏴‍☠️
 
 - Process: Determine the process allowed to access the memory.
 - Memory: Determine the memory allowed to be accessed by the process.
 - Driver: The kernel acts as interface between the hardware and the user process.
 
-### Process Management
+### ✔ Process Management
 
 - Starting a process: The kernel creates a new process and allocates memory for it.
 - Pausing a process: The kernel suspends the process and saves its state.
@@ -49,17 +53,17 @@ The main memory is the place where the data and instructions are stored. An slot
 
 Note: Many processes can be running simultaneously but only one process can be running at a time.
 
-### Memory Management
+### ✔ Memory Management
 
 - Allocating memory: The kernel allocates memory for a process.
 - Freeing memory: The kernel frees memory allocated for a process.
 - Swapping: The kernel moves a process from memory to disk and vice versa.
 
-### Device Drivers
+### ✔ Device Drivers 
 
 Allowing the user process to interact with a hardware device.
 
-### System Calls
+### ✔ System Calls
 
 Interaction between the user process and the kernel.
 
@@ -70,11 +74,11 @@ Interaction between the user process and the kernel.
 - Kill: Terminate a process.
 - Init: Start the init process.
 
-### User Space
+## User Space 🏴‍☠️
 
 The space that kernel allocated for the user process.
 
-### Users
+## Users 🏴‍☠️
 
 A users is an entity that can run programs. Each user has a unique user ID (UID) and a unique group ID (GID). The user ID is used to identify the user and the group ID is used to identify the group of users.
 
