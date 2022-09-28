@@ -1,4 +1,44 @@
+---
+title: Linux Cheat Sheet
+author: "Julio Flores"
+date: "2022-09-28"
+output: flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column 1
+--------------------------------------------------
+
+### Chart A
+
+```{r}
+```
+
+Column 2
+--------------------------------------------------
+
+### Chart B
+
+```{r}
+```
+
+### Chart C
+
+```{r}
+```
+
+
 # Linux Cheat Sheet
+
+<!-- Tree image inline with html -->
+
+
+
+
+This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
 ## Table of Contents
 
@@ -36,3 +76,5 @@
       - [Redirect](./commands/README.mdredirect)
       - [Some useful commands](./commands/README.md#some-useful-commands)
 - [Change Password (passwd)](./change-password/README.md#change-password-passwd)
+
+## 
