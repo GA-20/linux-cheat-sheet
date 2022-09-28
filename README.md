@@ -35,3 +35,4 @@
       - [Pipe](./commands/README.md#pipe)
       - [Redirect](./commands/README.mdredirect)
       - [Some useful commands](./commands/README.md#some-useful-commands)
+- [Change Password (passwd)](./change-password/README.md#change-password-passwd)
