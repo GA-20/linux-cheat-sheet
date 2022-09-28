@@ -1,42 +1,33 @@
----
-title: Linux Cheat Sheet
-author: "Julio Flores"
-date: "2022-09-28"
-output: flexdashboard::flex_dashboard
----
-
-```{r setup, include=FALSE}
-library(flexdashboard)
-```
-
-Column 1
---------------------------------------------------
-
-### Chart A
-
-```{r}
-```
-
-Column 2
---------------------------------------------------
-
-### Chart B
-
-```{r}
-```
-
-### Chart C
-
-```{r}
-```
-
+<style>
+  #header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  #header > div {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+  }
+</style>
 
 # Linux Cheat Sheet
 
-<!-- Tree image inline with html -->
-
-
-
+<div id="header">
+  <div>
+    <img src="./media/linux-logo.png" alt="Linux Logo">
+  </div>
+  <div>
+    <img src="./media/linux-logo.png" alt="Linux Logo">
+  </div>
+  <div>
+    <img src="./media/linux-logo.png" alt="Linux Logo">
+  </div>
+</div>
 
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
@@ -77,4 +68,6 @@ This is a collection of notes about Linux. It is not a complete guide, perhaps t
       - [Some useful commands](./commands/README.md#some-useful-commands)
 - [Change Password (passwd)](./change-password/README.md#change-password-passwd)
 
-## 
+## How to Use This Cheat Sheet
+
+This cheat sheet is organized in a way that you can use it as a reference. You can use the Table of Contents to jump to the section you want to read. Many of the sections have links to other sections, so you can jump to the next section or to the previous section.
