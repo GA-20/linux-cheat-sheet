@@ -1,25 +1,4 @@
-<<<<<<< HEAD:achitecture-overview/README.md
-## Table of content
-
-- [Table of content](#table-of-content)
-- [Linux Achitecture](#linux)
-  - [Levels and Layers in Linux](#levels-and-layers-in-linux)
-    - [Hardware: Level 1](#hardware-level-1)
-    - [Kernel: Level 2](#kernel-level-2)
-    - [User Process: Level 3](#user-process-level-3)
-  - [Hardware: Main Memory](#hardware-main-memory)
-  - [Kernel: System Calls](#kernel-system-calls)
-    - [Process Management](#process-management)
-    - [Memory Management](#memory-management)
-    - [Device Drivers](#device-drivers)
-    - [System Calls](#system-calls)
-    - [User Space](#user-space)
-    - [Users](#users)
-
-## Levels and Layers in Linux
-=======
 ## Levels and Layers in Linux 🏴‍☠️
->>>>>>> 889390c48a3ce7037e6742505d5ff3bca67494cf:working-process/README.md
 
 ### ✔ Hardware: Level 1
 

@@ -119,7 +119,7 @@ $ grep [options] [pattern] [file]
 ```
 
 | Argument | Description                                | Input                             | Output                        |
-| -------- | ------------------------------------------ | --------------------------------- | ----------------------------- | ------------- |
+| -------- | ------------------------------------------ | --------------------------------- | ----------------------------- |
 | pattern  | The string to search                       | `grep hello file`                 | `hello world`                 |
 | -i       | Ignore case                                | `grep -i hello file`              | `hello world`                 |
 | -n       | Print the line number                      | `grep -n hello file`              | `1:hello world`               |
@@ -128,14 +128,14 @@ $ grep [options] [pattern] [file]
 | -l       | Print the file name                        | `grep -l hello file`              | `file`                        |
 | -r       | Search in subfolders                       | `grep -r hello file`              | `file:hello world`            |
 | -w       | Match the whole word                       | `grep -w hello file`              | `hello`                       |
-| -E       | Use extended regular expressions           | `grep -E "hello                   | world" file`                  | `hello world` |
+| -E       | Use extended regular expressions           | `grep -E "hello                   | world" file`                  |
 | -F       | Use fixed strings                          | `grep -F "hello world" file`      | `hello world`                 |
 | -e       | Use a pattern                              | `grep -e "hello" -e "world" file` | `hello world`                 |
 | -o       | Print only the matched part                | `grep -o "hello" file`            | `hello`                       |
 | -A       | Print the lines after the match            | `grep -A 1 "hello" file`          | `hello world` `world`         |
 | -B       | Print the lines before the match           | `grep -B 1 "hello" file`          | `hello` `hello world`         |
 | -C       | Print the lines before and after the match | `grep -C 1 "hello" file`          | `hello` `hello world` `world` |
-| -P       | Use Perl regular expressions               | `grep -P "hello                   | world" file`                  | `hello world` |
+| -P       | Use Perl regular expressions               | `grep -P "hello                   | world" file`                  |
 | -z       | Search for null terminated strings         | `grep -z "hello" file`            | `hello`                       |
 
 ### Less
