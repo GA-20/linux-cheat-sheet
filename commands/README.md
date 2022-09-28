@@ -181,3 +181,5 @@ $ echo hello world > file # It will print "hello world" in the file "file"
 | uniq     | Remove duplicate lines                 | `uniq file`            | `hello world`   |
 | cut      | Cut out selected portions of each line | `cut -d " " -f 1 file` | `hello`         |
 | tr       | Translate or delete characters         | `tr " " "\n" < file`   | `hello` `world` |
+| file     | Determine the type of a file           | `file file`            | `ASCII text`    |
+| du       | Estimate file space usage              | `du file`              | `4 file`        |
