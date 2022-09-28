@@ -1,33 +1,8 @@
-<style>
-  #header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-  #header > div {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    margin: 10px;
-  }
-</style>
-
 # Linux Cheat Sheet
 
-<div id="header">
-  <div>
-    <img src="./media/linux-logo.png" alt="Linux Logo">
-  </div>
-  <div>
-    <img src="./media/linux-logo.png" alt="Linux Logo">
-  </div>
-  <div>
-    <img src="./media/linux-logo.png" alt="Linux Logo">
-  </div>
-</div>
+<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
+<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
+<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
 
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
