@@ -169,7 +169,7 @@ The redirect `>` is used to redirect the output of a command to a file.
 $ echo hello world > file # It will print "hello world" in the file "file"
 ```
 
-### Some more useful commands
+### Some useful commands
 
 | Argument | Description                            | Input                  | Output          |
 | -------- | -------------------------------------- | ---------------------- | --------------- |

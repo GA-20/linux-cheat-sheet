@@ -34,4 +34,4 @@
       - [Less](./commands/README.md#less)
       - [Pipe](./commands/README.md#pipe)
       - [Redirect](./commands/README.mdredirect)
-      - [Some more useful commands](./commands/README.md#some-more-useful-commands)
+      - [Some useful commands](./commands/README.md#some-useful-commands)
