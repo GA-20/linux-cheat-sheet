@@ -29,6 +29,7 @@ This is a collection of notes about Linux. It is not a complete guide, perhaps t
   - [Path Commands](./env-shell-variables/README.md#path-commands)
   - [Special Characters](./env-shell-variables/README.md#special-characters)
   - [Command Line Editing](./env-shell-variables/README.md#command-line-editing)
+- [Editors](./editors/README.md)
 
 ## How to Use This Cheat Sheet
 
