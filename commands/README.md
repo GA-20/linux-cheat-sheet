@@ -22,29 +22,29 @@
     - [Redirect](#redirect)
     - [Some more useful commands](#some-more-useful-commands)
 
-## The shell
+## The shell 🏴‍☠️
 
 The shell is program stored in the `/bin/sh` that run commands, these commands can be other programs or built-in features. The shell is also a programming language that can be used to automate tasks.
 
-## The standard input, output and error
+## The standard input, output and error🏴‍☠️
 
-### Standard input (stdin)
+### ✔ Standard input (stdin)
 
 The standard input is the input that a program receives from the keyboard. It is represented by the file descriptor 0.
 
-### Standard output (stdout)
+### ✔ Standard output (stdout)
 
 The standard output is the output that a program sends to the shell windows. It is represented by the file descriptor 1.
 
-### Standard error (stderr)
+### ✔ Standard error (stderr)
 
 The standard error is the output that a program sends to the shell windows when it encounters an error. It is represented by the file descriptor 2.
 
-## Arguments
+## Arguments 🏴‍☠️
 
 Arguments are the parameters that a program receives from the shell. They are separated by spaces.
 
-### --help
+### ✔ --help
 
 The `--help` argument is a special argument that is used to display the help of a program.
 
@@ -54,7 +54,7 @@ example:
 $ ls --help
 ```
 
-## Wildcards
+## Wildcards 🏴‍☠️
 
 Expands are used to replace a string with another string.
 
@@ -68,9 +68,9 @@ Expands are used to replace a string with another string.
 | `*`    | Expand files that contain the string between the `*` and the `*` | `ls *1*`   | `file1 file2`         |
 | `?`    | Match a exactly one character                                    | `ls b?at`  | `boat` and `brat`     |
 
-## Commands
+## Commands 🏴‍☠️
 
-### Moving around
+### ✔ Moving around
 
 | Command | Description                                                     | shell input     | shell output             |
 | ------- | --------------------------------------------------------------- | --------------- | ------------------------ |
@@ -78,7 +78,7 @@ Expands are used to replace a string with another string.
 | `cd`    | Change the current working directory                            | `cd /home/user` | No output                |
 | `ls`    | List the files and directories in the current working directory | `ls`            | `file1 file2 directory1` |
 
-### Creating and removing files and directories
+### ✔ Creating and removing files and directories
 
 | Command | Description                                                                    | shell input                 | shell output  |
 | ------- | ------------------------------------------------------------------------------ | --------------------------- | ------------- |
@@ -90,9 +90,9 @@ Expands are used to replace a string with another string.
 | `cp`    | Copy a file or directory                                                       | `cp file1 file2`            | No output     |
 | `echo`  | Print the arguments                                                            | `echo hello world`          | `hello world` |
 
-### Searching for files
+### ✔ Searching for files
 
-#### find
+#### ✔ find
 
 The `find` command is used to search for files and directories.
 
@@ -110,7 +110,7 @@ $ find [path] [options] [expression]
 | --version | Print the version of the command              | `find --version`     | `find (GNU findutils) 4.6.0`                                  |
 | -cnewer   | Search for files that are newer than the file | `find -cnewer file1` | `/home/user/file2`                                            |
 
-#### Grep
+#### ✔ Grep
 
 The `grep` command is used to search for a string in a file.
 
@@ -138,7 +138,7 @@ $ grep [options] [pattern] [file]
 | -P       | Use Perl regular expressions               | `grep -P "hello                   | world" file`                  |
 | -z       | Search for null terminated strings         | `grep -z "hello" file`            | `hello`                       |
 
-### Less
+### ✔ Less
 
 The `less` command is used to view the contents of a file, see all the contents of a file without opening it.
 
@@ -153,7 +153,7 @@ $ less [file]
 
 Note: Use `--help` to see all the options.
 
-### Pipe
+### ✔ Pipe
 
 The pipe `|` is used to send the output of one command to another command.
 
@@ -161,7 +161,7 @@ The pipe `|` is used to send the output of one command to another command.
 $ grep hello file | less # It will print the lines that contain the string "hello" in the file "file" and then it will open the file with less
 ```
 
-### Redirect
+### ✔ Redirect
 
 The redirect `>` is used to redirect the output of a command to a file.
 
@@ -169,7 +169,7 @@ The redirect `>` is used to redirect the output of a command to a file.
 $ echo hello world > file # It will print "hello world" in the file "file"
 ```
 
-### Some useful commands
+### ✔ Some useful commands
 
 | Argument | Description                            | Input                  | Output          |
 | -------- | -------------------------------------- | ---------------------- | --------------- |

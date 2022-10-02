@@ -15,11 +15,11 @@
 - [Special Characters](#special-characters)
 - [Command Line Editing](#command-line-editing)
 
-## Shell Variables
+## Shell Variables 🏴‍☠️
 
 Shell variables are a way to store information that can be accessed by the shell and programs that the shell runs. They are useful for passing information to scripts and storing configuration information.
 
-### Setting Variables
+### ✔ Setting Variables
 
 Variables are set using the `=` operator. There is no space between the variable name, the equal sign, and the value. The value can be anything, but there are some rules:
 
@@ -35,11 +35,11 @@ $ echo $MY_MESSAGE
 Hello World
 ```
 
-### Variable Types
+### ✔ Variable Types
 
 There are two types of variables: local and environment variables. Local variables are only available to the current shell and any programs that it runs. Environment variables are available to any program that the user runs.
 
-#### Local Variables
+#### ✔ Local Variables
 
 Local variables are set by assigning a value to them using the `=` operator. They are used to store information for the current shell and any programs that it runs.
 
@@ -49,7 +49,7 @@ $ echo $MY_MESSAGE
 Hello World
 ```
 
-#### Environment Variables
+#### ✔ Environment Variables
 
 Environment variables are set by assigning a value to them using the `export` command. They are used to store information for any program that the user runs.
 
@@ -59,7 +59,7 @@ $ echo $MY_MESSAGE
 Hello World
 ```
 
-### Unsetting Variables
+### ✔ Unsetting Variables
 
 Variables can be unset by using the `unset` command. This removes the variable from the current shell.
 
@@ -74,7 +74,7 @@ $ echo $MY_MESSAGE
 $
 ```
 
-### Variable Substitution
+### ✔ Variable Substitution
 
 Variables can be substituted into other strings using the `$` character. This is useful for constructing messages.
 
@@ -84,7 +84,7 @@ $ echo "I said $MY_MESSAGE"
 I said Hello World
 ```
 
-### Command Substitution
+### ✔ Command Substitution
 
 Commands can be substituted into other strings using the `$()` syntax. This is useful for constructing messages.
 
@@ -93,11 +93,11 @@ $ echo "I said $(echo Hello World)"
 I said Hello World
 ```
 
-## Path Commands
+## Path Commands 🏴‍☠️
 
 The `PATH` variable is a special environment variable that is used to store a list of directories. When a user runs a command, the shell looks for that command in each directory in the `PATH` variable. If the command is found, it is run. If the command is not found, an error is displayed. Restarting the shell will reload the `PATH` variable.
 
-### Setting the Path
+### ✔ Setting the Path
 
 The `PATH` variable can be set using the `export` command.
 
@@ -105,7 +105,7 @@ The `PATH` variable can be set using the `export` command.
 $ export PATH="/usr/local/bin:/usr/bin:/bin"
 ```
 
-### Adding to the Path
+### ✔ Adding to the Path
 
 The `PATH` variable can be added to using the `:` operator.
 
@@ -113,7 +113,7 @@ The `PATH` variable can be added to using the `:` operator.
 $ export PATH="$PATH:/usr/local/bin"
 ```
 
-### Prepending to the Path
+### ✔ Prepending to the Path
 
 The `PATH` variable can be prepended to using the `:` operator.
 
@@ -121,7 +121,7 @@ The `PATH` variable can be prepended to using the `:` operator.
 $ export PATH="/usr/local/bin:$PATH"
 ```
 
-### Unsetting the Path
+### ✔ Unsetting the Path
 
 The `PATH` variable can be unset using the `unset` command.
 
@@ -129,7 +129,7 @@ The `PATH` variable can be unset using the `unset` command.
 $ unset PATH
 ```
 
-## Special Characters
+## Special Characters 🏴‍☠️
 
 There are a few special characters that have special meanings to the shell. These characters are used to perform operations like globbing, piping, and redirection.
 
@@ -155,7 +155,7 @@ There are a few special characters that have special meanings to the shell. Thes
 | `;`       | semicolon    | command separator                           | `echo ;`  | `echo ;`    |
 | `-`       | dash         | option, history                             | `echo -`  | `echo -`    |
 
-## Command Line Editing
+## Command Line Editing 🏴‍☠️
 
 The shell provides a number of features for editing the command line. These features are useful for correcting typos and editing commands.
 
