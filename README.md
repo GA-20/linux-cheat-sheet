@@ -3,10 +3,10 @@
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
 - [How to Use This Cheat Sheet](#how-to-use-this-cheat-sheet)
-- [The shell](#the-shell-🏴‍☠️)
-- [Shell Variables](#shell-variables-🏴‍☠️)
-- [Change Password (passwd)](#change-password-passwd-🏴‍☠️)
-- [Text Editors](#text-editors-🏴‍☠️)
+- [The shell](#the-shell)
+- [Shell Variables](#shell-variables)
+- [Change Password (passwd)](#change-password-passwd)
+- [Text Editors](#text-editors)
 
 ## How to Use This Cheat Sheet
 
