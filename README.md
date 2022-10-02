@@ -1,18 +1,24 @@
 # Linux Cheat Sheet
 
-<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
-<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
-<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
-
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
-## Table of Contents
-
-- [Levels and Layers in Linux 🏴‍☠️](#levels-and-layers-in-linux-)
-  - [✔ Hardware: Level 1](#-hardware-level-1)
-  - [✔ Kernel: Level 2](#-kernel-level-2)
-  - [✔ User Process: Level 3](#-user-process-level-3)
-- [Hardware: Main Memory 🏴‍☠️](#hardware-main-memory-)
+- [How to Use This Cheat Sheet](#how-to-use-this-cheat-sheet)
+- [Levels and Layers in Linux](#levels-and-layers-in-linux-🏴‍☠️)
+- [Hardware: Main Memory](#hardware-main-memory-🏴‍☠️)
+- [Kernel](#kernel-🏴‍☠️)
+- [User Space](#user-space-🏴‍☠️)
+- [Users](#users-🏴‍☠️)
+- [The shell](#the-shell-🏴‍☠️)
+- [The standard input, output and error](#the-standard-input-output-and-error🏴‍☠️)
+- [Arguments](#arguments-🏴‍☠️)
+- [Wildcards](#wildcards-🏴‍☠️)
+- [Commands](#commands-🏴‍☠️)
+- [Shell Variables](#shell-variables-🏴‍☠️)
+- [Path Commands](#path-commands-🏴‍☠️)
+- [Special Characters](#special-characters-🏴‍☠️)
+- [Command Line Editing](#command-line-editing-🏴‍☠️)
+- [Change Password (passwd)](#change-password-passwd-🏴‍☠️)
+- [Text Editors](#text-editors-🏴‍☠️)
 
 ## How to Use This Cheat Sheet
 
