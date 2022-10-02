@@ -3,20 +3,8 @@
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
 - [How to Use This Cheat Sheet](#how-to-use-this-cheat-sheet)
-- [Levels and Layers in Linux](#levels-and-layers-in-linux-🏴‍☠️)
-- [Hardware: Main Memory](#hardware-main-memory-🏴‍☠️)
-- [Kernel](#kernel-🏴‍☠️)
-- [User Space](#user-space-🏴‍☠️)
-- [Users](#users-🏴‍☠️)
 - [The shell](#the-shell-🏴‍☠️)
-- [The standard input, output and error](#the-standard-input-output-and-error🏴‍☠️)
-- [Arguments](#arguments-🏴‍☠️)
-- [Wildcards](#wildcards-🏴‍☠️)
-- [Commands](#commands-🏴‍☠️)
 - [Shell Variables](#shell-variables-🏴‍☠️)
-- [Path Commands](#path-commands-🏴‍☠️)
-- [Special Characters](#special-characters-🏴‍☠️)
-- [Command Line Editing](#command-line-editing-🏴‍☠️)
 - [Change Password (passwd)](#change-password-passwd-🏴‍☠️)
 - [Text Editors](#text-editors-🏴‍☠️)
 
@@ -40,17 +28,17 @@ It is responsible for managing the hardware and providing an interface for the u
 
 The running programs managed by the kernel. (graphical user interface, servers, shell, etc.)
 
-## Hardware: Main Memory 🏴‍☠️
+### Hardware: Main Memory 🏴‍☠️
 
 The main memory is the place where the data and instructions are stored. An slot in the memory is called a byte. The memory is organized in a way that each byte has a unique address. The address is a number that identifies the byte.
 
-## Kernel 🏴‍☠️
+#### Kernel 🏴‍☠️
 
 - Process: Determine the process allowed to access the memory.
 - Memory: Determine the memory allowed to be accessed by the process.
 - Driver: The kernel acts as interface between the hardware and the user process.
 
-### ✔ Process Management
+#### ✔ Process Management
 
 - Starting a process: The kernel creates a new process and allocates memory for it.
 - Pausing a process: The kernel suspends the process and saves its state.
@@ -60,17 +48,17 @@ The main memory is the place where the data and instructions are stored. An slot
 
 Note: Many processes can be running simultaneously but only one process can be running at a time.
 
-### ✔ Memory Management
+#### ✔ Memory Management
 
 - Allocating memory: The kernel allocates memory for a process.
 - Freeing memory: The kernel frees memory allocated for a process.
 - Swapping: The kernel moves a process from memory to disk and vice versa.
 
-### ✔ Device Drivers
+#### ✔ Device Drivers
 
 Allowing the user process to interact with a hardware device.
 
-### ✔ System Calls
+#### ✔ System Calls
 
 Interaction between the user process and the kernel.
 
