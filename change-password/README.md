@@ -2,7 +2,7 @@
 
 - [Change Password (passwd)](#change-password-passwd)
 
-## Change Password (passwd)
+## Change Password (passwd) 🏴‍☠️
 
 ```ssh
 $ passwd
