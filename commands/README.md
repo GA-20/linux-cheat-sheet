@@ -155,22 +155,6 @@ $ less [file]
 
 Note: Use `--help` to see all the options.
 
-### ✔ Pipe
-
-The pipe `|` is used to send the output of one command to another command.
-
-```bash
-$ grep hello file | less # It will print the lines that contain the string "hello" in the file "file" and then it will open the file with less
-```
-
-### ✔ Redirect
-
-The redirect `>` is used to redirect the output of a command to a file.
-
-```bash
-$ echo hello world > file # It will print "hello world" in the file "file"
-```
-
 ### ✔ Some useful commands
 
 | Argument | Description                            | Input                  | Output          |
