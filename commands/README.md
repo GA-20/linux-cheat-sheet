@@ -94,7 +94,7 @@ Expands are used to replace a string with another string.
 
 #### ✔ find
 
-The `find` command is used to search for files and directories.
+The `find` command is used to search for files and directories based so some conditions like permissions, users, groups, file types, date, size, and other possible criteria.
 
 ```bash
 $ find [path] [options] [expression]
@@ -104,7 +104,9 @@ $ find [path] [options] [expression]
 | --------- | --------------------------------------------- | -------------------- | ------------------------------------------------------------- |
 | path      | The path to search in                         | `find /home/user`    | `/home/user/file1` `/home/user/file2` `/home/user/directory1` |
 | -name     | The name of the file                          | `find -name file`    | `/home/user/file1` `/home/user/file2`                         |
+| -iname    | Find by name ignoring case                    | `find -iname file`   | `/home/user/file1` `/home/user/file2`                         |
 | -type     | The type of the file                          | `find -type f`       | `/home/user/file1` `/home/user/file2`                         |
+| -perm     | The permissions of the file                   | `find -perm 777`     | `/home/user/file1` `/home/user/file2`                         |
 | -print    | Print the result                              | `find -print`        | `/home/user/file1` `/home/user/file2`                         |
 | -depth    | Search in subfolders                          | `find -depth`        | `/home/user/file1` `/home/user/file2`                         |
 | --version | Print the version of the command              | `find --version`     | `find (GNU findutils) 4.6.0`                                  |

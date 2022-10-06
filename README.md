@@ -1,8 +1,6 @@
 # Linux Cheat Sheet
 
 <img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
-<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
-<img src="./media/linux-logo.png" width="100px" height="100px" alt="Linux Logo">
 
 This is a collection of notes about Linux. It is not a complete guide, perhaps this is a good place to remember some of the most important commands and concepts of Linux, and not an starting point for those who want to learn Linux from scratch.
 
