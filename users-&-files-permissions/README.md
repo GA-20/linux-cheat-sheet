@@ -207,3 +207,11 @@ The symbolic permissions are represented by a string of three characters, where 
 sudo chmod ugo+rwx file.txt # Change the permissions of a file to all permissions
 sudo chmod u+rwx,g+rwx,o+rwx file.txt # Change the permissions of a file to all permissions
 ```
+
+#### Changing Ownership and Group in Linux
+
+The following command changes the ownership of a file:
+
+```bash
+$ chown <user>:<group> <file> # Change the ownership of a file
+```
