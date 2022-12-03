@@ -54,11 +54,9 @@ Expands are used to replace a string with another string.
 | `*`    | Expand files that contain the string between the `*` and the `*` | `ls *1*`   | `file1 file2`         |
 | `?`    | Match a exactly one character                                    | `ls b?at`  | `boat` and `brat`     |
 
-## Commands 🏴‍☠️
+## ✔ Moving around
 
-### ✔ Moving around
-
-#### `ls` - List directory contents
+### `ls` - List directory contents
 
 ```bash
 $ ls
@@ -76,7 +74,7 @@ Arguments:
 | `-R`     | Recursively list subdirectories encountered.                                |
 | `-S`     | Sort files by size                                                          |
 
-#### `cd` - Change directory
+### `cd` - Change directory
 
   ```bash
   $ cd <directory>
@@ -91,10 +89,17 @@ Arguments:
 | `.`      | Change to the current directory                                             |
 | `..`     | Change to the parent directory                                              |
 
+### `nautlius` - File manager
 
-### ✔ Creating and removing files and directories
+Open the file manager.
 
-#### `tree`
+ ```bash
+ $ nautlius
+ ```
+
+## ✔ Creating and removing files and directories
+
+### `tree`
 
 List contents of directories in a tree-like format
 
@@ -114,7 +119,7 @@ Arguments:
 | `-I`     | Do not list files that match the given pattern                              |
 
 
-#### File
+### File
 
 The `file` command is used to determine the type of a file.
 
@@ -132,7 +137,7 @@ Arguments:
 | `-z`     | Print the file type in zero terminated format                               |
 | `-Z`     | Print the SELinux security context of the file                              |
 
-#### `touch`
+### `touch`
 
 The `touch` command is used to create a file if it doesn't exist, otherwise update the last modification time.
 
@@ -151,7 +156,7 @@ Arguments:
 | `-r`     | Use this file's times instead of current time                               |
 | `-t`     | Parse STRING and use it instead of current time                             |
 
-#### `rm`
+### `rm`
 
 The `rm` command is used to remove a file or directory.
 
@@ -168,7 +173,7 @@ Arguments:
 | `-r`     | Remove directories and their contents recursively                            |
 | `-v`     | Explain what is being done                                                   |
 
-#### `mv`
+### `mv`
 
 The `mv` command is used to move a file or directory.
 
@@ -185,7 +190,7 @@ Arguments:
 | `-n`     | Do not overwrite an existing file                                            |
 | `-u`     | Move only when the SOURCE file is newer than the destination file or when the destination file is missing |
 
-#### `cp`
+### `cp`
 
 The `cp` command is used to copy a file or directory.
 
@@ -208,7 +213,7 @@ Arguments:
 | `-s`     | Make symbolic links instead of copying                                       |
 | `-P`     | Preserve the attributes of the original file                                 |
 
-#### `rmdir`
+### `rmdir`
 
 The `rmdir` command is used to remove a directory.
 
@@ -225,7 +230,7 @@ Arguments:
 | `-i`     | Prompt before every removal                                                  |
 | `-I`     | Ignore nonexistent directories, never prompt                                 |
 
-#### `echo`
+### `echo`
 
 The `echo` command is used to print the arguments.
 
@@ -241,9 +246,105 @@ Arguments:
 | `-n`     | Do not output the trailing newline                                           |
 | `-E`     | Disable interpretation of backslash escapes                                  |
 
-### ✔ Searching for files
 
-#### ✔ find
+## Explore files
+
+### `cat`
+
+The `cat` command is used to concatenate files and print on the standard output.
+
+```bash
+$ cat file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-A`     | Equivalent to -vET                                                           |
+| `-b`     | Number the non-blank output lines, starting at 1                             |
+| `-e`     | Equivalent to -vE                                                            |
+| `-E`     | Display $ at end of each line                                                |
+| `-n`     | Number all output lines, starting at 1                                       |
+| `-s`     | Squeeze multiple adjacent empty lines, causing the output to be single spaced |
+| `-t`     | Equivalent to -vT                                                            |
+| `-T`     | Display TAB characters as ^I                                                 |
+| `-u`     | (ignored)                                                                   |
+| `-v`     | Display non-printing characters so they are visible                          |
+
+### `head`
+
+The `head` command is used to output the first part of files.
+
+```bash
+$ head file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-c`     | Print the first NUM bytes of each file                                       |
+| `-n`     | Print the first NUM lines instead of the first 10                            |
+| `-q`     | Never print headers giving file names                                        |
+| `-v`     | Always print headers giving file names                                       |
+
+### `tail`
+
+The `tail` command is used to output the last part of files.
+
+```bash
+tail file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-c`     | Print the last NUM bytes of each file                                        |
+| `-n`     | Print the last NUM lines instead of the last 10                              |
+| `-q`     | Never print headers giving file names                                        |
+| `-v`     | Always print headers giving file names                                       |
+
+### `less`
+
+The `less` command is used to view the contents of a file.
+
+```bash
+$ less file1
+```
+
+Actions:
+
+| Action | Description                                                                 |
+| ------ | --------------------------------------------------------------------------- |
+| `q`    | Quit                                                                         |
+| `h`    | Show help                                                                    |
+| `j`    | Scroll down                                                                  |
+| `k`    | Scroll up                                                                    |
+| `G`    | Go to the end of the file                                                    |
+| `g`    | Go to the beginning of the file                                              |
+| `/`    | Search for a string                                                          |
+| `n`    | Go to the next search result                                                 |
+| `N`    | Go to the previous search result                                             |
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-e`     | Quit if the file is empty                                                   |
+| `-f`     | Quit if the file is smaller than the screen                                  |
+| `-g`     | Quit if the file is smaller than the screen                                  |
+| `-i`     | Ignore case when searching                                                  |
+| `-m`     | Quit if the file is smaller than the screen                                  |
+| `-N`     | Show line numbers                                                           |
+| `-S`     | Chop long lines                                                             |
+
+
+
+## Searching for files
+
+### `find`
 
 The `find` command is used to search for files and directories based so some conditions like permissions, users, groups, file types, date, size, and other possible criteria.
 
@@ -263,7 +364,7 @@ $ find [path] [options] [expression]
 | --version | Print the version of the command              | `find --version`     | `find (GNU findutils) 4.6.0`                                  |
 | -cnewer   | Search for files that are newer than the file | `find -cnewer file1` | `/home/user/file2`                                            |
 
-#### ✔ Grep
+### Grep
 
 The `grep` command is used to search for a string in a file.
 
@@ -290,33 +391,3 @@ $ grep [options] [pattern] [file]
 | -C       | Print the lines before and after the match | `grep -C 1 "hello" file`          | `hello` `hello world` `world` |
 | -P       | Use Perl regular expressions               | `grep -P "hello                   | world" file`                  |
 | -z       | Search for null terminated strings         | `grep -z "hello" file`            | `hello`                       |
-
-### ✔ Less
-
-The `less` command is used to view the contents of a file, see all the contents of a file without opening it.
-
-```bash
-$ less [file]
-```
-
-| Argument | Description           | Input          | Output          |
-| -------- | --------------------- | -------------- | --------------- |
-| file     | The file to view      | `less file`    | `hello world`   |
-| -N       | Print the line number | `less -N file` | `1:hello world` |
-
-Note: Use `--help` to see all the options.
-
-### ✔ Some useful commands
-
-| Argument | Description                            | Input                  | Output          |
-| -------- | -------------------------------------- | ---------------------- | --------------- |
-| cat      | Print the contents of a file           | `cat file`             | `hello world`   |
-| head     | Print the first lines of a file        | `head file`            | `hello world`   |
-| tail     | Print the last lines of a file         | `tail file`            | `hello world`   |
-| wc       | Count the lines, words and characters  | `wc file`              | `1 2 11`        |
-| sort     | Sort the lines of a file               | `sort file`            | `hello world`   |
-| uniq     | Remove duplicate lines                 | `uniq file`            | `hello world`   |
-| cut      | Cut out selected portions of each line | `cut -d " " -f 1 file` | `hello`         |
-| tr       | Translate or delete characters         | `tr " " "\n" < file`   | `hello` `world` |
-| file     | Determine the type of a file           | `file file`            | `ASCII text`    |
-| du       | Estimate file space usage              | `du file`              | `4 file`        |
