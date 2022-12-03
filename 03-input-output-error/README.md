@@ -25,6 +25,17 @@ The standard input, output and error can be redirected to files or to other prog
 | `2>`   | Redirect standard error                     | `cat file.txt 2> file2.txt`  | Error            |
 | `2>&1` | Redirect standard error to standard output  | `cat file.txt 2>&1`          | Error            |
 
+### Pipe (|)
+
+The pipe symbol (`|`) is used to redirect the output of one program to the input of another program. This is called piping.
+
+The following command will print the contents of the file `file.txt` to the screen, but it will only print the first 10 lines:
+
+```bash
+
+cat file.txt | head -n 10
+```
+
 ## Understanding Error Messages
 
 When a program fails to execute, it will usually print an error message to the screen. The error message will tell you what went wrong and why the program failed to execute. The error message will also tell you how to fix the problem.
@@ -52,3 +63,63 @@ When a program fails to execute, it will usually print an error message to the s
 | `No space left on device`   | No space left on device.                               | `rm file.txt`    | `rm: file.txt: No space left on device`    |
 | `Operation not permitted`   | Operation not permitted.                               | `rm file.txt`    | `rm: file.txt: Operation not permitted`    |
 | `Segmentation fault`        | Tried to access a part of a memory that is not allowed | `rm file.txt`    | `Segmentation fault`                       |
+
+## Control Operators
+
+Control operators are used to control the flow of a program. They are used to change the order in which commands are executed.
+
+### ;
+
+The semicolon (`;`) is used to separate multiple commands on the same line, excute commands synchronously.
+
+```bash
+ls; touch file.txt; cat file.txt
+```
+
+### &
+
+The ampersand (`&`) is used to separate multiple commands on the same line, excute commands asynchronously. Create a new process in the background.
+
+```bash
+ls & touch file.txt & cat file.txt
+```
+
+### &&
+
+The `&&` operator is used to execute the second command only if the first command was successful. If the first command fails, the second command will not be executed.
+
+```bash
+sudo apt-get update && sudo apt-get upgrade
+```
+
+### ||
+
+The `||` operator is used to execute the second command only if the first command fails. If the first command is successful, the second command will not be executed.
+
+```bash
+sudo apt-get update || sudo apt-get upgrade
+```
+
+### ()
+
+The parentheses (`()`) are used to group commands together. This is useful when you want to execute multiple commands in a single command.
+
+```bash
+touch file.txt && (cat file.txt; rm file.txt)
+```
+
+### {}
+
+The curly braces (`{}`) are used to group commands together. This is useful when you want to execute multiple commands in a single command.
+
+```bash
+touch file.txt && { cat file.txt; rm file.txt }
+```
+
+### \#
+
+The hash (`#`) is used to add comments to a script. Anything after the hash will be ignored by the shell.
+
+```bash
+# This is a comment
+```
