@@ -1,30 +1,16 @@
 # Linux Scentials Commands
 
-## Table of Contents
+## The terminal
 
-- [Table of Content](#table-of-contents)
-- [The shell](#the-shell)
-- [The standard input, output and error](#the-standard-input-output-and-error)
-  - [Standard input (stdin)](#standard-input-stdin)
-  - [Standard output (stdout)](#standard-output-stdout)
-  - [Standard error (stderr)](#standard-error-stderr)
-- [Arguments](#arguments)
-  - [--help](#help)
-- [Wildcards](#wildcards)
-- [Commands](#commands)
-  - [Moving around](#moving-around)
-  - [Creating and removing files and directories](#creating-and-removing-files-and-directories)
-  - [Searching for Files](#searching-for-files)
-    - [Find](#find)
-    - [Grep](#grep)
-    - [Less](#less)
-    - [Pipe](#pipe)
-    - [Redirect](#redirect)
-    - [Some more useful commands](#some-more-useful-commands)
+The terminal is a windows which allow to communicate with a shell.
 
 ## The shell 🏴‍☠️
 
 The shell is program stored in the `/bin/sh` that run commands, these commands can be other programs or built-in features. The shell is also a programming language that can be used to automate tasks.
+
+## The command
+
+A command is a program that can be run by the shell. A command can be a built-in feature or a program stored in the `/bin` directory.
 
 ## The standard input, output and error🏴‍☠️
 
@@ -72,23 +58,188 @@ Expands are used to replace a string with another string.
 
 ### ✔ Moving around
 
-| Command | Description                                                     | shell input     | shell output             |
-| ------- | --------------------------------------------------------------- | --------------- | ------------------------ |
-| `pwd`   | Print the current working directory                             | `pwd`           | `/home/user`             |
-| `cd`    | Change the current working directory                            | `cd /home/user` | No output                |
-| `ls`    | List the files and directories in the current working directory | `ls`            | `file1 file2 directory1` |
+#### `ls` - List directory contents
+
+```bash
+$ ls
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-a`     | List all files, including hidden files                                      |
+| `-l`     | List in long format                                                         |
+| `-h`     | Print sizes in human readable format (e.g., 1K 234M 2G)                      |
+| `-r`     | Reverse the order of the sort                                                |
+| `-t`     | Sort by time modified (most recently modified first) before sorting the operands by lexicographical order. |
+| `-R`     | Recursively list subdirectories encountered.                                |
+| `-S`     | Sort files by size                                                          |
+
+#### `cd` - Change directory
+
+  ```bash
+  $ cd <directory>
+  ```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-`      | Change to the previous directory                                            |
+| `~`      | Change to the home directory                                                |
+| `.`      | Change to the current directory                                             |
+| `..`     | Change to the parent directory                                              |
+
 
 ### ✔ Creating and removing files and directories
 
-| Command | Description                                                                    | shell input                 | shell output  |
-| ------- | ------------------------------------------------------------------------------ | --------------------------- | ------------- |
-| `touch` | Create a file if it doesn't exist, otherwise update the last modification time | `touch file1`               | No output     |
-| `mkdir` | Create a directory                                                             | `mkdir directory1`          | No output     |
-| `rm`    | Remove a file or directory                                                     | `rm file1`                  | No output     |
-| `rmdir` | Remove a directory                                                             | `rmdir directory1`          | No output     |
-| `mv`    | Move a file or directory                                                       | `mv file1 directory1/file1` | No output     |
-| `cp`    | Copy a file or directory                                                       | `cp file1 file2`            | No output     |
-| `echo`  | Print the arguments                                                            | `echo hello world`          | `hello world` |
+#### `tree`
+
+List contents of directories in a tree-like format
+
+```bash
+$ tree
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-a`     | List all files, including hidden files                                      |
+| `-d`     | List directories only                                                       |
+| `-f`     | Print the full path prefix for each file                                    |
+| `-L + N`     | Descend only level directories deep                                         |
+| `-P`     | Print the full path prefix for each file                                    |
+| `-I`     | Do not list files that match the given pattern                              |
+
+
+#### File
+
+The `file` command is used to determine the type of a file.
+
+```bash
+$ file file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-b`     | Print the file type in brief mode                                           |
+| `-i`     | Print the MIME type                                                         |
+| `-h`     | Print the file type in human readable format                                |
+| `-z`     | Print the file type in zero terminated format                               |
+| `-Z`     | Print the SELinux security context of the file                              |
+
+#### `touch`
+
+The `touch` command is used to create a file if it doesn't exist, otherwise update the last modification time.
+
+```bash
+$ touch file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-a`     | Change only the access time                                                 |
+| `-c`     | Do not create any files                                                     |
+| `-d`     | Parse STRING and use it instead of current time                             |
+| `-m`     | Change only the modification time                                           |
+| `-r`     | Use this file's times instead of current time                               |
+| `-t`     | Parse STRING and use it instead of current time                             |
+
+#### `rm`
+
+The `rm` command is used to remove a file or directory.
+
+```bash
+$ rm file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-f`     | Ignore nonexistent files and arguments, never prompt                         |
+| `-i`     | Prompt before every removal                                                  |
+| `-r`     | Remove directories and their contents recursively                            |
+| `-v`     | Explain what is being done                                                   |
+
+#### `mv`
+
+The `mv` command is used to move a file or directory.
+
+```bash
+$ mv file1 directory1/file1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-f`     | Do not prompt before overwriting                                             |
+| `-i`     | Prompt before overwrite                                                      |
+| `-n`     | Do not overwrite an existing file                                            |
+| `-u`     | Move only when the SOURCE file is newer than the destination file or when the destination file is missing |
+
+#### `cp`
+
+The `cp` command is used to copy a file or directory.
+
+```bash
+$ cp file1 file2
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-a`     | this option preserves the original file's attributes                         |
+| `-r`     | Copy directories recursively                                                 |
+| `-f`     | Do not prompt before overwriting                                             |
+| `-i`     | Prompt before overwrite                                                      |
+| `-n`     | Do not overwrite an existing file                                            |
+| `-u`     | Copy only when the SOURCE file is newer than the destination file or when the destination file is missing |
+| `-v`     | Explain what is being done                                                   |
+| `-l`     | Make hard links instead of copying                                          |
+| `-s`     | Make symbolic links instead of copying                                       |
+| `-P`     | Preserve the attributes of the original file                                 |
+
+#### `rmdir`
+
+The `rmdir` command is used to remove a directory.
+
+```bash
+$ rmdir directory1
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-p`     | Remove the parent directories as well                                        |
+| `-v`     | Explain what is being done                                                   |
+| `-i`     | Prompt before every removal                                                  |
+| `-I`     | Ignore nonexistent directories, never prompt                                 |
+
+#### `echo`
+
+The `echo` command is used to print the arguments.
+
+```bash
+$ echo hello world
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-e`     | Enable interpretation of backslash escapes                                   |
+| `-n`     | Do not output the trailing newline                                           |
+| `-E`     | Disable interpretation of backslash escapes                                  |
 
 ### ✔ Searching for files
 
