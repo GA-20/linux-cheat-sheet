@@ -10,6 +10,11 @@ The shell is program stored in the `/bin/sh` that run commands, these commands c
 
 ## The command
 
+- Executable: a program that can be run by the shell, whriten in any language.
+- Built-in: a feature of the shell, written in C.
+- Shell function: extternal program written in with the shell language.
+- Alias: a shortcut for a command.
+
 A command is a program that can be run by the shell. A command can be a built-in feature or a program stored in the `/bin` directory.
 
 ## The standard input, output and error🏴‍☠️
@@ -30,7 +35,7 @@ The standard error is the output that a program sends to the shell windows when 
 
 Arguments are the parameters that a program receives from the shell. They are separated by spaces.
 
-### ✔ --help
+### `--help`
 
 The `--help` argument is a special argument that is used to display the help of a program.
 
@@ -39,6 +44,21 @@ example:
 ```bash
 $ ls --help
 ```
+
+### `whatis`
+
+The `whatis` command is used to display the help of a program.
+
+example:
+
+```bash
+$ whatis ls
+```
+
+### `man`
+
+The `man` command is used to display the manual of a program.
+
 
 ## Wildcards 🏴‍☠️
 
@@ -52,7 +72,21 @@ Expands are used to replace a string with another string.
 | `*`    | Expand files that end with the string before the `*`             | `ls *.txt` | `file1.txt file2.txt` |
 | `*`    | Expand files that start with the string after the `*`            | `ls file*` | `file1 file2`         |
 | `*`    | Expand files that contain the string between the `*` and the `*` | `ls *1*`   | `file1 file2`         |
-| `?`    | Match a exactly one character                                    | `ls b?at`  | `boat` and `brat`     |
+| `?`    | Match a exactly one character  (`???` match tree char)                                  | `ls b?at`  | `boat` and `brat`     |
+| `[[:upper:]]*`  | Match a string that start with an uppercase letter | `ls [[:upper:]]*` | `File1 File2` |
+| `[[:lower:]]*`  | Match a string that start with an lowercase letter | `ls [[:lower:]]*` | `file1 file2` |
+| `[[:digit:]]*`  | Match a string that start with a digit | `ls [[:digit:]]*` | `1file 2file` |
+| `[[:alnum:]]*`  | Match a string that start with a digit or a letter | `ls [[:alnum:]]*` | `1file 2file File1 File2 file1 file2` |
+| `[[:alpha:]]*`  | Match a string that start with a letter | `ls [[:alpha:]]*` | `File1 File2 file1 file2` |
+| `[[:blank:]]*`  | Match a string that start with a space or a tab | `ls [[:blank:]]*` | ` File1 File2 file1 file2` |
+| `[[:cntrl:]]*`  | Match a string that start with a control character | `ls [[:cntrl:]]*` | `` |
+| `[[:graph:]]*`  | Match a string that start with a printable character except space | `ls [[:graph:]]*` | `File1 File2 file1 file2` |
+| `[[:print:]]*`  | Match a string that start with a printable character | `ls [[:print:]]*` | ` File1 File2 file1 file2` |
+| `[[:punct:]]*`  | Match a string that start with a punctuation character | `ls [[:punct:]]*` | ` File1 File2 file1 file2` |
+| `[[:space:]]*`  | Match a string that start with a space | `ls [[:space:]]*` | ` File1 File2 file1 file2` |
+| `[[:xdigit:]]*`  | Match a string that start with a hexadecimal digit | `ls [[:xdigit:]]*` | `1file 2file` |
+| `[[:word:]]*`  | Match a string that start with a word character | `ls [[:word:]]*` | `1file 2file File1 File2 file1 file2` |
+| `[[:ascii:]]*`  | Match a string that start with an ascii character | `ls [[:ascii:]]*` | `1file 2file File1 File2 file1 file2` |
 
 ## ✔ Moving around
 
@@ -340,6 +374,21 @@ Arguments:
 | `-N`     | Show line numbers                                                           |
 | `-S`     | Chop long lines                                                             |
 
+### Aliases
+
+Aliases are a way to create shortcuts for commands. For example, you can create an alias for `git status` to `gs`. The life of an alias is limited to the current shell session. To make an alias permanent, you need to add it to your `~/.bashrc` file.
+
+```bash
+$ alias gs='git status'
+```
+
+Arguments:
+
+| Argument | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `-p`     | Print the alias definition                                                   |
+| `-r`     | Remove an alias                                                              |
+| `-s`     | List all aliases                                                             |
 
 
 ## Searching for files
@@ -391,3 +440,4 @@ $ grep [options] [pattern] [file]
 | -C       | Print the lines before and after the match | `grep -C 1 "hello" file`          | `hello` `hello world` `world` |
 | -P       | Use Perl regular expressions               | `grep -P "hello                   | world" file`                  |
 | -z       | Search for null terminated strings         | `grep -z "hello" file`            | `hello`                       |
+
