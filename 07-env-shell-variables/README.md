@@ -1,20 +1,5 @@
 ## Table of Content
 
-- [Setting Variables](#setting-variables)
-- [Variable Types](#variable-types)
-  - [Local Variables](#local-variables)
-  - [Environment Variables](#environment-variables)
-- [Unsetting Variables](#unsetting-variables)
-- [Variable Substitution](#variable-substitution)
-- [Command Substitution](#command-substitution)
-- [Path Commands](#path-commands)
-  - [Setting the Path](#setting-the-path)
-  - [Adding to the Path](#adding-to-the-path)
-  - [Prepending to the Path](#prepending-to-the-path)
-  - [Unsetting the Path](#unsetting-the-path)
-- [Special Characters](#special-characters)
-- [Command Line Editing](#command-line-editing)
-
 ## Shell Variables 🏴‍☠️
 
 Shell variables are a way to store information that can be accessed by the shell and programs that the shell runs. They are useful for passing information to scripts and storing configuration information.
@@ -38,6 +23,12 @@ Hello World
 ### ✔ Variable Types
 
 There are two types of variables: local and environment variables. Local variables are only available to the current shell and any programs that it runs. Environment variables are available to any program that the user runs.
+
+```bash
+printenv # print all environment variables
+echo $VARIABLE_NAME # print the value of VARIABLE
+echo $PATH  # all routes witch store all the paths to all the executables like: node, npm, git, etc.
+```
 
 #### ✔ Local Variables
 
@@ -127,6 +118,13 @@ The `PATH` variable can be unset using the `unset` command.
 
 ```bash
 $ unset PATH
+```
+
+### Add a path directly to the .bashrc file
+
+```bash
+$ vim ~/.bashrc
+PATH=$PATH:/usr/local/bin
 ```
 
 ## Special Characters 🏴‍☠️
