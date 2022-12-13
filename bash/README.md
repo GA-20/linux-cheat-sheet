@@ -183,9 +183,22 @@ echo "${my_array[@]}"
 
 All Shell Variables:
 
-| Shell Variable | Description                          |
-| -------------- | ------------------------------------ |
-| `read`         | built-in command to read in a string |
+| Shell Variable | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| `read`         | built-in command to read in a string                  |
+| `IFS`          | field separator used by `read`                        |
+| `PS1`          | prompt displayed by the shell                         |
+| `PS2`          | secondary prompt displayed by the shell               |
+| `PS3`          | prompt displayed by the select command                |
+| `PS4`          | prompt displayed by the set -x option                 |
+| `BASH`         | path to the Bash executable                           |
+| `BASH_VERSION` | version of Bash                                       |
+| `HOME`         | path to the user's home directory                     |
+| `PATH`         | directories where the system searches for executables |
+| `PWD`          | path to the current working directory                 |
+| `RANDOM`       | random number between 0 and 32767                     |
+| `UID`          | user ID of the current user                           |
+| `USER`         | name of the current user                              |
 
 ### User-defined Variables
 
